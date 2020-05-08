@@ -1,4 +1,7 @@
+- name: repo  # defaults for any parameters that aren't specified
+  default: ''
+
 steps:
   - task: PowerShell@2
     inputs:
-      filePath: ../scripts/myscript.ps1
+      filePath: ${{ parameters.repo }}/scripts/myscript.ps1
