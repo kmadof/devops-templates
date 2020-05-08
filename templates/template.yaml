@@ -1,3 +1,4 @@
+parameters:
 - name: repo  # defaults for any parameters that aren't specified
   default: ''
 
