@@ -1,5 +1,7 @@
 # File: start.yml
 parameters:
+- name: repo  # defaults for any parameters that aren't specified
+  default: ''
 - name: buildSteps # the name of the parameter is buildSteps
   type: stepList # data type is StepList
   default: [] # default value of buildSteps
@@ -7,7 +9,7 @@ stages:
 - stage: secure_buildstage
   pool: Hosted VS2017
   jobs:
-  - template: process.yaml
+  - template: ${{ parameters.repo }}/templates/process.yaml
     parameters:
       pool:   # this parameter is called `pool`
         vmImage: ubuntu-latest  # and it's a mapping rather than a string
