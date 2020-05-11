@@ -1,0 +1,6 @@
+parameters:
+- name: repo  # defaults for any parameters that aren't specified
+  default: ''
+
+steps:
+  - pwsh: Write-Host 'Hello form another template'
