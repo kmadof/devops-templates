@@ -9,7 +9,7 @@ stages:
 - stage: secure_buildstage
   pool: Hosted VS2017
   jobs:
-  - template: ${{ parameters.repo }}/templates/process.yaml
+  - template: templates/process.yaml
     parameters:
       pool:   # this parameter is called `pool`
         vmImage: ubuntu-latest  # and it's a mapping rather than a string
