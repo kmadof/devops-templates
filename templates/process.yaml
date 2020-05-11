@@ -7,6 +7,6 @@ jobs:
 - job: build
   pool: ${{ parameters.pool }}
   steps:
-  - template: anohter-template.yaml
+  - template: another-template.yaml
     parameters:
       repo: devops-templates
