@@ -1,0 +1,12 @@
+parameters:
+- name: 'pool'
+  type: object
+  default: {}
+
+jobs:
+- job: build
+  pool: ${{ parameters.pool }}
+  steps:
+  - template: template.yaml
+    parameters:
+      repo: devops-templates
